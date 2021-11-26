@@ -1,0 +1,42 @@
+//Flex
+
+.f {
+  flex: auto;
+}
+
+@mixin f-basis($basis) {
+  flex-basis: $basis;
+}
+
+.f-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.f-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-jcc {
+  justify-content: center;
+}
+
+.f-ais {
+  align-items: flex-start;
+}
+
+.f-aic {
+  align-items: center;
+}
+
+.f-aie {
+  align-items: flex-end;
+}
+
+
+.xt-center-item {
+  @extend .f-col;
+  @extend .f-jcc;
+  @extend .f-aic;
+}

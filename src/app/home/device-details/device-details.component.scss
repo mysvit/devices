@@ -1,0 +1,64 @@
+@use '../../../scss/flex' as fx;
+@use '../../../scss/default' as def;
+
+:host {
+  @extend .f;
+  @extend .f-col;
+  margin: {
+    left: 2vw;
+    right: 2vw;
+    top: 4vh;
+    bottom: 4vh;
+  };
+}
+
+.details-container {
+  @extend .f;
+  @extend .f-row;
+  justify-content: space-between;
+  margin: {
+    top: 4vh;
+    bottom: 4vh;
+  };
+}
+
+.related-devices-container {
+  @include fx.f-basis(47vw);
+  @extend .f-col;
+  border: def.$c-border 1px solid;
+}
+
+.related-devices-list {
+  @extend .f;
+  @extend .f-col;
+}
+
+.device-details-container {
+  @include fx.f-basis(47vw);
+  @extend .f-col;
+  border: def.$c-border 1px solid;
+}
+
+.title {
+  @extend .f-row;
+  @extend .f-aic;
+  padding-left: 2vw;
+  margin-bottom: 3vh;
+  height: 8vh;
+  background-color: def.$c-background-main;
+  font-size: min(5vh, 5vw);
+}
+
+.detail-text {
+  @extend .f-row;
+  @extend .f-aic;
+  padding-left: 1vw;
+  margin: 1vh;
+  font-size: min(4vh, 4vw);
+}
+
+.detail-chart {
+  height: 50%;
+  width: 95%;
+  margin: 1vh;
+}

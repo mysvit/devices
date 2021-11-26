@@ -1,0 +1,22 @@
+@use 'default' as def;
+@use 'flex' as fx;
+
+.device-box {
+  &.lg {
+    @include fx.f-basis(21vh);
+  }
+
+  &.sm {
+    @include fx.f-basis(17vh);
+  }
+
+  @extend .f-row;
+  background-color: def.$c-background-main;
+  margin: {
+    top: 2vh;
+  };
+
+  &:hover {
+    cursor: pointer;
+  }
+}

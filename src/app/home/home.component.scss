@@ -1,0 +1,6 @@
+@use "../../scss/flex" as fx;
+
+:host {
+  @extend .f;
+  @extend .f-col;
+}

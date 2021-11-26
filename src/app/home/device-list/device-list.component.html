@@ -1,0 +1,6 @@
+<app-search-box (search)="searchEvent($event)"></app-search-box>
+<div class="devices-list">
+    <ng-container *ngFor="let device of devices">
+        <app-device-box class="device-box lg" [device]="device" (click)="deviceClick(device)"></app-device-box>
+    </ng-container>
+</div>

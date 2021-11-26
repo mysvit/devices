@@ -1,0 +1,47 @@
+@use '../../../scss/flex' as fx;
+@use '../../../scss/default' as def;
+
+.device-icon {
+  @include fx.f-basis(23%);
+  @extend .xt-center-item;
+
+  .icon {
+    height: min(15vh, 15vw);
+  }
+}
+
+.device-name {
+  @include fx.f-basis(67%);
+  @extend .f-col;
+
+  .name {
+    @extend .f;
+    @extend .f-row;
+    @extend .f-aie;
+    font-size: min(5vh, 5vw);
+  }
+
+  .status {
+    @extend .f;
+    @extend .f-row;
+    @extend .f-ais;
+    font-size: min(4vh, 4vw);
+
+    &.Available {
+      color: def.$c-green-1;
+    }
+
+    &.Offline {
+      color: def.$c-red-1;
+    }
+  }
+}
+
+.device-info {
+  @include fx.f-basis(15%);
+  @extend .xt-center-item;
+
+  .icon {
+    height: min(7vh, 7vw);
+  }
+}

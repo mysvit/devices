@@ -1,0 +1,20 @@
+<app-search-box></app-search-box>
+
+<div class="details-container">
+    <div class="related-devices-container">
+        <div class="title"><b>Related Devices</b></div>
+        <div class="related-devices-list">
+            <ng-container *ngFor="let device of relatedDevices">
+                <app-device-box class="device-box sm" [device]="device" [infoButton]="false"></app-device-box>
+            </ng-container>
+        </div>
+    </div>
+
+    <div *ngIf="deviceDetails" class="device-details-container">
+        <div class="title"><b>Details:{{deviceDetails.name}}</b></div>
+        <div class="detail-text">Status:{{deviceDetails.status}}</div>
+        <div class="detail-text">Temperature:{{deviceDetails.temperature}}</div>
+        <div class="detail-text">Usage:</div>
+        <img alt="Usage" class="detail-chart" src="assets/svg/usage.png">
+    </div>
+</div>

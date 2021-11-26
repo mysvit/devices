@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'scss/default' as def;
+@use 'scss/flex' as fx;
+@use 'scss/components' as cm;
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  @extend .f;
+  @extend .f-col;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}

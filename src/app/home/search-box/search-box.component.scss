@@ -1,0 +1,47 @@
+@use "../../../scss/flex" as fx;
+@use '../../../scss/default' as def;
+
+:host {
+  @include fx.f-basis(15vh);
+  @extend .f-col;
+  background-color: def.$c-background-main;
+}
+
+.search-group {
+  @extend .f;
+  @extend .f-row;
+  @extend .f-aic;
+
+  margin: {
+    left: 2vw;
+    right: 2vw;
+  };
+}
+
+.search-icon {
+  height: 9vh;
+  background-color: white;
+}
+
+.search-input {
+  height: 9vh;
+  font-size: 6vh;
+  width: 100%;
+  background-color: white;
+  padding: 0;
+  border: 0 solid;
+  outline: none;
+}
+
+.search-button {
+  @extend .f-row;
+  @extend .f-aic;
+  color: def.$c-btn-search;
+  height: 9vh;
+  font-size: 5vh;
+  margin-left: 3vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

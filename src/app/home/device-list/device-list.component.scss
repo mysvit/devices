@@ -1,0 +1,22 @@
+@use "../../../scss/flex" as fx;
+
+:host {
+  @extend .f;
+  @extend .f-col;
+  margin: {
+    left: 2vw;
+    right: 2vw;
+    top: 3vh;
+    bottom: 3vh;
+  };
+}
+
+.devices-list {
+  @include fx.f-basis(65vh);
+  @extend .f-col;
+
+  margin: {
+    top: 4vh;
+    bottom: 4vh;
+  };
+}

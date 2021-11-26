@@ -1,0 +1,10 @@
+<div class="device-icon">
+    <img alt="{{device.icon}}" class="icon" src="assets/svg/{{device.icon}}">
+</div>
+<div class="device-name">
+    <div class="name">{{device.name}}</div>
+    <div class="status" [ngClass]="device.status">Status:{{device.status}}</div>
+</div>
+<div class="device-info" *ngIf="infoButton">
+    <img alt="Info" class="icon" src="assets/svg/info.svg">
+</div>
