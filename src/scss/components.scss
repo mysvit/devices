@@ -1,7 +1,7 @@
 @use 'default' as def;
 @use 'flex' as fx;
 
-.device-box {
+app-device-box {
   &.lg {
     @include fx.f-basis(21vh);
   }

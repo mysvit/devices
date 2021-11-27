@@ -3,9 +3,9 @@
 <div class="details-container">
     <div class="related-devices-container">
         <div class="title"><b>Related Devices</b></div>
-        <div class="related-devices-list">
+        <div class="related-devices-list-container">
             <ng-container *ngFor="let device of relatedDevices">
-                <app-device-box class="device-box sm" [device]="device" [infoButton]="false"></app-device-box>
+                <app-device-box class="sm" [device]="device" [infoButton]="false"></app-device-box>
             </ng-container>
         </div>
     </div>

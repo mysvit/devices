@@ -11,7 +11,7 @@
   };
 }
 
-.devices-list {
+.devices-list-container {
   @include fx.f-basis(65vh);
   @extend .f-col;
 
