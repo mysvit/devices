@@ -1,0 +1,74 @@
+[
+  {
+    "id": "0",
+    "relatedTo": "3",
+    "icon": "cell-phone.svg",
+    "name": "Device 1",
+    "status": "Available",
+    "temperature": "10 Celsius"
+  },
+  {
+    "id": "1",
+    "relatedTo": "0",
+    "icon": "tablet.svg",
+    "name": "Device 2",
+    "status": "Offline",
+    "temperature": "16 Celsius"
+  },
+  {
+    "id": "2",
+    "relatedTo": "0",
+    "icon": "pc.svg",
+    "name": "Device 3",
+    "status": "Available",
+    "temperature": "19 Celsius"
+  },
+  {
+    "id": "3",
+    "relatedTo": "0",
+    "icon": "cell-phone.svg",
+    "name": "Device 4",
+    "status": "Available",
+    "temperature": "10 Celsius"
+  },
+  {
+    "id": "4",
+    "relatedTo": "1",
+    "icon": "tablet.svg",
+    "name": "Device 5",
+    "status": "Available",
+    "temperature": "22 Celsius"
+  },
+  {
+    "id": "5",
+    "relatedTo": "1",
+    "icon": "cell-phone.svg",
+    "name": "Device 6",
+    "status": "Available",
+    "temperature": "10 Celsius"
+  },
+  {
+    "id": "6",
+    "relatedTo": "2",
+    "icon": "cell-phone.svg",
+    "name": "Device 7",
+    "status": "Available",
+    "temperature": "45 Celsius"
+  },
+  {
+    "id": "7",
+    "relatedTo": "2",
+    "icon": "tablet.svg",
+    "name": "Device 8",
+    "status": "Available",
+    "temperature": "80 Celsius"
+  },
+  {
+    "id": "8",
+    "relatedTo": "2",
+    "icon": "cell-phone.svg",
+    "name": "Device 9",
+    "status": "Available",
+    "temperature": "78 Celsius"
+  }
+]

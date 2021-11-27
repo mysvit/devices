@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiBase : 'https/my-server.com/api'
 };
 
 /*

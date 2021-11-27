@@ -7,6 +7,7 @@ import {DeviceBoxComponent} from './home/device-box/device-box.component';
 import {DeviceDetailsComponent} from './home/device-details/device-details.component'
 import {DeviceListComponent} from './home/device-list/device-list.component'
 import {HomeRoutingModule} from './home/home-routing.module'
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import {HomeRoutingModule} from './home/home-routing.module'
     imports: [
         HomeRoutingModule,
         BrowserModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [HomeComponent]
