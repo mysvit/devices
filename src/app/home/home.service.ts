@@ -20,13 +20,14 @@ export class HomeService {
             : this.mockGetDevices(options)
     }
 
-    // simulate back-end API return just first 3 records
+    // simulate back-end API for dev or test environment
+    // return just first 3 records
     private mockGetDevices(options: any): Observable<Array<Device>> {
         const name = options.params ? options.params.get('name') : ''
         return this.http.get<Array<Device>>('assets/db/devices.json')
             .pipe(
                 map(data =>
-                    data.filter(devices => devices.name.indexOf(name) >= 0).splice(0, 3)),
+                    data.filter(devices => devices.name.indexOf(name) >= 0).splice(0, 3))
             )
     }
 
@@ -37,7 +38,7 @@ export class HomeService {
             : this.mockGetDeviceDetails(options)
     }
 
-    // simulate back-end API
+    // simulate back-end API for dev or test environment
     private mockGetDeviceDetails(options: any): Observable<Device> {
         const id = options.params ? options.params.get('id') : ''
         return this.http.get<Array<Device>>('assets/db/devices.json')
@@ -53,7 +54,8 @@ export class HomeService {
             : this.mockGetRelatedDevices(options)
     }
 
-    // simulate back-end API return just first 3 records
+    // simulate back-end API for dev or test environment
+    // return just first 3 records
     private mockGetRelatedDevices(options: any): Observable<Array<Device>> {
         const id = options.params ? options.params.get('id') : ''
         return this.http.get<Array<Device>>('assets/db/devices.json')

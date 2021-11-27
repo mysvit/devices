@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HomeService} from '../home.service'
 import {Device} from '../home.model'
 import {Router} from '@angular/router'
+import {map} from 'rxjs/operators';
 
 @Component({
     selector: 'app-device-list',
@@ -17,7 +18,11 @@ export class DeviceListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.homeService.getDevices('').subscribe(data => this.devices = data)
+        this.loadData().subscribe()
+    }
+
+    loadData() {
+        return this.homeService.getDevices('').pipe(map(data => this.devices = data))
     }
 
     searchEvent(searchText: string) {
