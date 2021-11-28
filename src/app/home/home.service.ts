@@ -16,7 +16,7 @@ export class HomeService {
     getDevices(name: string): Observable<Array<Device>> {
         name = name.trim()
         const options = name ? {params: new HttpParams().set('name', name)} : {}
-        return environment.production ? this.http.get<Array<Device>>(environment.apiBase + 'getDevices', options)
+        return environment.production ? this.http.get<Array<Device>>(environment.apiBase.concat('getDevices'), options)
             : this.mockGetDevices(options)
     }
 
@@ -24,7 +24,7 @@ export class HomeService {
     // return just first 3 records
     private mockGetDevices(options: any): Observable<Array<Device>> {
         const name = options.params ? options.params.get('name') : ''
-        return this.http.get<Array<Device>>('assets/db/devices.json')
+        return this.http.get<Array<Device>>(environment.apiBase.concat('devices.json'))
             .pipe(
                 map(data =>
                     data.filter(devices => devices.name.indexOf(name) >= 0).splice(0, 3))
@@ -34,14 +34,14 @@ export class HomeService {
     getDeviceDetails(id: string): Observable<Device> {
         id = id.trim()
         const options = id ? {params: new HttpParams().set('id', id)} : {}
-        return environment.production ? this.http.get<Device>(environment.apiBase + 'getDeviceDetails', options)
+        return environment.production ? this.http.get<Device>(environment.apiBase.concat('getDeviceDetails'), options)
             : this.mockGetDeviceDetails(options)
     }
 
     // simulate back-end API for dev or test environment
     private mockGetDeviceDetails(options: any): Observable<Device> {
         const id = options.params ? options.params.get('id') : ''
-        return this.http.get<Array<Device>>('assets/db/devices.json')
+        return this.http.get<Array<Device>>(environment.apiBase.concat('devices.json'))
             .pipe(
                 map(data => data.find(f => f.id === id) || <Device>{}),
             )
@@ -50,7 +50,7 @@ export class HomeService {
     getRelatedDevices(id: string): Observable<Array<Device>> {
         id = id.trim()
         const options = id ? {params: new HttpParams().set('id', id)} : {}
-        return environment.production ? this.http.get<Array<Device>>(environment.apiBase + 'getRelatedDevices', options)
+        return environment.production ? this.http.get<Array<Device>>(environment.apiBase.concat('getRelatedDevices'), options)
             : this.mockGetRelatedDevices(options)
     }
 
@@ -58,7 +58,7 @@ export class HomeService {
     // return just first 3 records
     private mockGetRelatedDevices(options: any): Observable<Array<Device>> {
         const id = options.params ? options.params.get('id') : ''
-        return this.http.get<Array<Device>>('assets/db/devices.json')
+        return this.http.get<Array<Device>>(environment.apiBase.concat('devices.json'))
             .pipe(
                 map(data => data.filter(f => f.relatedTo === id).splice(0, 3))
             )
