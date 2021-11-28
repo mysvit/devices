@@ -18,20 +18,20 @@ export class DeviceListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.loadData().subscribe()
-    }
-
-    loadData() {
-        return this.homeService.getDevices('').pipe(map(data => this.devices = data))
+        this.getDevices().subscribe()
     }
 
     searchEvent(searchText: string) {
-        this.homeService.getDevices(searchText).subscribe(data => this.devices = data)
+        this.getDevices(searchText).subscribe()
     }
 
     deviceClick(device: Device) {
-        console.log(device)
+        console.debug(device)
         this.router.navigate(['device-details', device.id])
+    }
+
+    private getDevices(searchText: string = '') {
+        return this.homeService.getDevices(searchText).pipe(map(data => this.devices = data))
     }
 
 }

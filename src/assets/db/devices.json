@@ -27,39 +27,39 @@
     "id": "3",
     "relatedTo": "0",
     "icon": "cell-phone.svg",
-    "name": "Device 4",
-    "status": "Available",
+    "name": "Device 13",
+    "status": "Offline",
     "temperature": "10 Celsius"
   },
   {
     "id": "4",
     "relatedTo": "1",
     "icon": "tablet.svg",
-    "name": "Device 5",
+    "name": "Device 15",
     "status": "Available",
     "temperature": "22 Celsius"
   },
   {
     "id": "5",
-    "relatedTo": "1",
+    "relatedTo": "12",
     "icon": "cell-phone.svg",
     "name": "Device 6",
-    "status": "Available",
+    "status": "Offline",
     "temperature": "10 Celsius"
   },
   {
     "id": "6",
     "relatedTo": "2",
     "icon": "cell-phone.svg",
-    "name": "Device 7",
-    "status": "Available",
+    "name": "Device 33",
+    "status": "Offline",
     "temperature": "45 Celsius"
   },
   {
     "id": "7",
     "relatedTo": "2",
     "icon": "tablet.svg",
-    "name": "Device 8",
+    "name": "Device 18",
     "status": "Available",
     "temperature": "80 Celsius"
   },
@@ -67,7 +67,7 @@
     "id": "8",
     "relatedTo": "2",
     "icon": "cell-phone.svg",
-    "name": "Device 9",
+    "name": "Device 21",
     "status": "Available",
     "temperature": "78 Celsius"
   }
